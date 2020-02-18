@@ -1,0 +1,129 @@
+{% extends '_base-landing-lead.html' %}
+
+{% block title %}Como Investir nos EUA {{super()}}{% endblock %}
+
+{% block content %}
+      <!-- 
+      Slider #1
+      ============================================= 
+      -->
+      <section class="section slider slider-2 bg-dark" id="slider">
+        <div class="slide--item bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-12">
+                <div class="slide--logo mt-100 d-none d-sm-block wow fadeInUp" data-wow-duration="1s">
+                  <img src="{{url_for('static',filename='images/logo/logo-light.png')}}" alt="logo hero"/></div>
+              </div>
+            </div>
+            <div class="row row-content">
+              <div class="col-12 col-md-5  wow fadeInUp" data-wow-duration="1s">
+                <div class="slide--holder"><img class="img-fluid" src="{{url_for('static',filename='images/mockup/book.png')}}" alt="screens"/></div>
+              </div>
+              <div class="col-12 col-md-6 offset-md-1  pt-100 wow fadeInUp" data-wow-duration="1s">
+                <div class="slide--headline">Investir nos Estados Unidos é mais fácil do que você pensa</div>
+                <div class="slide--bio">Baixe o nosso e-book exclusivo e veja como você pode comprar ações das grandes empresas americanas em menos de cinco dias</div>
+                <div class="slide--action">
+                  <form class="mb-0" enctype="multipart/form-data" id="hsForm_90256be2-1abf-478b-894d-86de50094e53" method="POST" action="">
+                    {{ form.csrf_token }}
+                    <div class="input-group">
+                      {{ form.email(class='form-control', placeholder='seu melhor email') }}
+                       <input type="hidden" class="form-control" id="90256be2-1abf-478b-894d-86de50094e53" name="redirectUrl" value="https://www.remessaonline.com.br"/>
+                      <span class="input-group-btn">
+                        <input class="btn btn--primary btn--rounded" type="submit" value="download" name="submit"/>
+                      </span>
+                    </form>
+                    </div>
+                    <!--  End .input-group-->
+                  {% if form.errors.email %}
+                    <div class="subscribe-alert" role="alert">
+                      <ul>
+                        {% for e in form.errors.email %}
+                          <li>{{ e }}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            <!-- End .row -->
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .slide-item -->
+      </section>
+      <!-- End #slider  -->
+      <div class="clearfix bg-white"></div>
+      <!-- 
+      Feature #2
+      =============================================  
+      -->
+      <section class="section feature feature-2 text-center bg-white" id="feature2">
+        <div class="container">
+          <div class="row clearfix">
+            <div class="col-12 col-md-12 col-lg-6 offset-lg-3">
+              <div class="heading heading-1 mb-70 text--center wow fadeInUp" data-wow-duration="1s">
+                <h2 class="heading--title">Você descobrirá o que não estão te dizendo sobre investir no exterior</h2>
+                <p class="heading--desc">Investir no exterior é mais seguro, tem mais opções e seu dinheiro pode render mais que no mercado brasileiro. E está ao alcance de qualquer pessoa, não precisa ser milionário para operar na bolsa de Nova York</p>
+              </div>
+            </div>
+            <!-- End .col-lg-6 -->
+          </div>
+          <!-- End .row  -->
+          <div class="row">
+            <!-- Panel #1  -->
+            <div class="col-12 col-md-4 col-lg-4 ">
+              <div class="feature-panel wow fadeInUp" data-wow-duration="1s">
+                <div class="feature--icon"><i class="lnr lnr-laptop-phone"></i></div>
+                <div class="feature--content">
+                  <h3>100% online</h3>
+                  <p>Você pode abrir uma conta 100% online.</p>
+                </div>
+              </div>
+              <!-- .feature-panel end  -->
+            </div>
+            <!-- .col-md-4 end  -->
+            <!-- Panel #2  -->
+            <div class="col-12 col-md-4 col-lg-4 ">
+              <div class="feature-panel wow fadeInUp" data-wow-duration="1s">
+                <div class="feature--icon"><i class="lnr lnr-lock"></i></div>
+                <div class="feature--content">
+                  <h3>Segurança e Rentabilidade</h3>
+                  <p>O mercado de capitais dos Estados Unidos é o maior, mais seguro e rentável do mundo.</p>
+                </div>
+              </div>
+              <!-- .feature-panel end  -->
+            </div>
+            <!-- .col-md-4 end  -->
+            <!-- Panel #3  -->
+            <div class="col-12 col-md-4 col-lg-4 ">
+              <div class="feature-panel wow fadeInUp" data-wow-duration="1s">
+                <div class="feature--icon"><i class="lnr lnr-diamond"></i></div>
+                <div class="feature--content">
+                  <h3>É possível começar com pouco dinheiro</h3>
+                  <p>Dá para começar a investir com pouco dinheiro, menos de US$ 100.</p>
+                </div>
+              </div>
+              <!-- .feature-panel end  -->
+            </div>
+            <!-- .col-md-4 end  -->
+          </div>
+          <!-- End .row  -->
+        </div>
+        <!-- End .container  -->
+      </section>
+      <!-- feature2 end  -->
+      <section class="pt-0 pb-0 bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+              <hr class="feature-divider"/>
+            </div>
+          </div>
+          <!--End .row -->
+        </div>
+        <!-- End .container  -->
+      </section>
+
+{% endblock %}

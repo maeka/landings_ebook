@@ -1,0 +1,44 @@
+{% extends '_base-tk-page.html' %}
+
+{% block title %}Como Investir nos EUA {{super()}}{% endblock %}
+
+{% block content %}
+      <!-- 
+      Slider #1
+      ============================================= 
+      -->
+      <section class="section slider slider-2 bg-dark" id="slider">
+        <div class="slide--item bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-12">
+                <div class="slide--logo mt-100 d-none d-sm-block wow fadeInUp" data-wow-duration="1s">
+                  <img src="{{url_for('static',filename='images/logo/logo-light.png')}}" alt="logo hero"/></div>
+              </div>
+            </div>
+            <div class="row row-content">
+              <div class="col-12 col-md-5  wow fadeInUp" data-wow-duration="1s">
+                <div class="slide--holder"><img class="img-fluid" src="{{url_for('static',filename='images/mockup/book.png')}}" alt="screens"/></div>
+              </div>
+              <div class="col-12 col-md-6 offset-md-1  pt-100 wow fadeInUp" data-wow-duration="1s">
+                <div class="slide--headline">Obrigado!</div>
+                <div class="slide--bio">Enviamos o e-book para o seu e-mail. Se preferir, pode fazer o download agora, clicando no botão abaixo.</div>
+                <div class="slide--action"><a class="btn btn--primary btn--rounded" href="{{url_for('static',filename='assets/ebook_inv_ext.pdf')}}">download</a></div>
+                    <!--  End .input-group-->
+
+                  <div class="subscribe-alert"></div>
+                </div>
+              </div>
+            </div>
+            <!-- End .row -->
+          </div>
+          <!-- End .container -->
+        </div>
+        <!-- End .slide-item -->
+      </section>
+      <!-- End #slider   -->
+      <div class="clearfix bg-white"></div>
+
+
+
+{% endblock %}
